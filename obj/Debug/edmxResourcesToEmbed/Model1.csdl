@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversidadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Maestro">
+    <Key>
+      <PropertyRef Name="NCuenta" />
+    </Key>
+    <Property Name="NCuenta" Type="Int32" Nullable="false" />
+    <Property Name="NombreCompleto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Profesion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Edad" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="UniversidadEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Maestroes" EntityType="Self.Maestro" />
+  </EntityContainer>
+</Schema>

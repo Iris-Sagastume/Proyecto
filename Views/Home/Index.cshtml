@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To-do CRUD</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <h3>Agregar Maestro</h3>
+   
+    <form action="javascript:void(0);" method="POST" onsubmit="addMaes()">
+        <li>
+            <label>Numero Cuenta:</label>
+            <input type="text" id="Codigo" placeholder="New Code">
+            <input type="submit" value="Agregar">
+        </li>
+        <li>
+            <label>Nombre Completo:</label>
+            <input type="text" id="Nombre" placeholder="New Name">
+        </li>
+        <li>
+            <label>Profesion:</label>
+            <input type="text" id="Profesion" placeholder="New Last Name">
+        </li>
+        <li>
+            <label>Carrera:</label>
+            <input type="text" id="Carrera" placeholder="New Age">
+        </li>
+        <li>
+            <label>Edad:</label>
+            <input type="text" id="Edad" placeholder="New Title">
+        </li>
+        
+    </form>
+
+    <div id="editForm">
+        <h3>Editar Maestro</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <label>Codigo:</label>
+            <input type="text" id="edit-code">
+            <label>Nombre:</label>
+            <input type="text" id="edit-name">
+            <label>Profesion:</label>
+            <input type="text" id="edit-profesion">
+            <label>Carrera:</label>
+            <input type="text" id="edit-carrera">
+            <label>Edad:</label>
+            <input type="text" id="edit-edad">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <h1>Mostrar Todos Los Maestros</h1>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Numero Cuenta</th>
+            <th>Nombre Completo</th>
+            <th>Profesion</th>
+            <th>Carrera</th>
+            <th>Edad</th>
+            <th>Editar Registro</th>
+            <th>Eliminar Registro</th>
+        </tr>
+        <tbody id="DetMaes"></tbody>
+    </table>
+    <p id="counter"></p>
+    <script src="~/Scripts/App/JavaScript.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getMaes();
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿input[type='submit'], button, [aria-label] {
+    cursor: pointer;
+    color: #ff6a00;
+}
+
+#editForm {
+    display: none;
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+tbody {
+    background-color: #0094ff;
+}

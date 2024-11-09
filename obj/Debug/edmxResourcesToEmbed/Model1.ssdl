@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Maestro">
+    <Key>
+      <PropertyRef Name="NCuenta" />
+    </Key>
+    <Property Name="NCuenta" Type="int" Nullable="false" />
+    <Property Name="NombreCompleto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profesion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Carrera" Type="nvarchar" MaxLength="50" />
+    <Property Name="Edad" Type="int" />
+  </EntityType>
+  <EntityContainer Name="UniversidadModelStoreContainer">
+    <EntitySet Name="Maestro" EntityType="Self.Maestro" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
